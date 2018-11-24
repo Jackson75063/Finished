@@ -1,39 +1,5 @@
 CREATE DATABASE  aaaa;
 
-CREATE TABLE `author` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL DEFAULT NULL,
-  `gender` VARCHAR(45) NULL DEFAULT NULL,
-  `born` DATE NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-)
-  COLLATE='utf8_general_ci'
-  ENGINE=InnoDB;
-
-
-CREATE TABLE `book` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(120) NULL DEFAULT NULL,
-  `published` DATE NULL DEFAULT NULL,
-  `genre` VARCHAR(45) NULL DEFAULT NULL,
-  `rating` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-)
-  COLLATE='utf8_general_ci'
-  ENGINE=InnoDB
-  AUTO_INCREMENT=10
-;
-
-CREATE TABLE `book_author` (
-  `id` INT(11) NOT NULL,
-  `book_id` INT(11) NOT NULL,
-  `author_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`)
-)
-  COLLATE='utf8_general_ci'
-  ENGINE=InnoDB;
-
-
 INSERT INTO `author` VALUES (1, 'Шкляр Василь Миколайович', 'male', '1951-06-10');
 INSERT INTO `author` VALUES (2, 'Joshua Bloch', 'male', '1961-07-28');
 INSERT INTO `author` VALUES (3, 'Martin Fowler', 'male', null);
